@@ -68,34 +68,41 @@ const skills = [
 const certificates = [
   {
     id: 1,
+    title: 'Certificate of Completion (OJT)',
+    org: 'RIDE Technology Business Incubator Office (486 Hours)',
+    file: 'OJT_Completion.jpg',
+    type: 'image',
+  },
+  {
+    id: 2,
     title: 'The AI Advantage',
     org: 'Understanding AI & Why It Matters',
     file: 'AI_Advantage.pdf',
     type: 'pdf',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Omada Network Training',
     org: 'OCNA Wireless — Armando V. Loro',
     file: 'Omada_Certificate_Template_A4_OCNA Wireless_Armando V. Loro.pdf',
     type: 'pdf',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Hack4Gov',
     org: 'Butuan City',
     file: 'Hack4Gov.jpg',
     type: 'image',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Pitching Competition',
     org: 'National Innovation Day',
     file: 'Pitching.jpg',
     type: 'image',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Elev8PH 2025 Startup Challenge',
     org: 'Hack4Smarter Butuan',
     file: 'Elev8PH.jpg',
@@ -236,7 +243,7 @@ function App() {
                   <div className="stat-label">Flagship Apps</div>
                 </div>
                 <div className="stat-item">
-                  <div className="stat-number">5</div>
+                  <div className="stat-number">6</div>
                   <div className="stat-label">Certificates</div>
                 </div>
               </div>
