@@ -185,7 +185,7 @@ body {
 }
 
 section {
-  padding: 100px 0;
+  padding: 44px 0;
 }
 
 .section-label {
@@ -197,7 +197,7 @@ section {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent-primary);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .section-label::before {
@@ -211,34 +211,34 @@ section {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   color: var(--text-primary);
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   max-width: 600px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* ==============================
    HERO SECTION
-============================== */
+============================= */
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 96px;
+  padding-bottom: 30px;
 }
 
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -246,14 +246,14 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 18px;
+  padding: 6px 14px;
   background: rgba(99, 102, 241, 0.15);
   border: 1px solid rgba(99, 102, 241, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--accent-primary);
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   letter-spacing: 0.05em;
 }
 
@@ -272,10 +272,10 @@ section {
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
   font-weight: 800;
   line-height: 1.05;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .gradient-text {
@@ -286,17 +286,17 @@ section {
 }
 
 .hero-role {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--text-secondary);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
 }
 
 .hero-description {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 40px;
+  line-height: 1.7;
+  margin-bottom: 24px;
   max-width: 520px;
 }
 
@@ -397,8 +397,8 @@ section {
 
 .hero-stats {
   display: flex;
-  gap: 32px;
-  margin-top: 48px;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .stat-item {
@@ -407,7 +407,7 @@ section {
 
 .stat-number {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   background: var(--gradient-text);
   -webkit-background-clip: text;
@@ -417,7 +417,7 @@ section {
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   margin-top: 4px;
   text-transform: uppercase;
@@ -428,8 +428,8 @@ section {
 .hero-contact {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 32px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .contact-chip {
@@ -455,15 +455,15 @@ section {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 36px;
   align-items: start;
 }
 
 .about-text p {
   color: var(--text-secondary);
-  line-height: 1.9;
-  margin-bottom: 20px;
-  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
 }
 
 .about-cards {
@@ -476,7 +476,7 @@ section {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 20px;
   transition: var(--transition);
 }
 
@@ -488,8 +488,8 @@ section {
 }
 
 .about-card .card-icon {
-  font-size: 1.75rem;
-  margin-bottom: 12px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   display: block;
 }
 
@@ -512,15 +512,15 @@ section {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 56px;
+  gap: 18px;
+  margin-top: 32px;
 }
 
 .skill-category {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 24px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -611,7 +611,7 @@ section {
 }
 
 .timeline {
-  margin-top: 56px;
+  margin-top: 32px;
   position: relative;
   padding-left: 32px;
 }
@@ -628,7 +628,7 @@ section {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .timeline-item::before {
@@ -648,7 +648,7 @@ section {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 24px;
   transition: var(--transition);
 }
 
@@ -706,15 +706,15 @@ section {
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-top: 56px;
+  gap: 18px;
+  margin-top: 32px;
 }
 
 .education-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 24px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -785,19 +785,19 @@ section {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 28px;
-  margin-top: 56px;
+  gap: 24px;
+  margin-top: 32px;
 }
 
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 36px;
+  padding: 28px;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .project-card:hover {
@@ -952,8 +952,8 @@ section {
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 28px;
-  margin-top: 56px;
+  gap: 20px;
+  margin-top: 32px;
 }
 
 .certificate-card {
@@ -1101,14 +1101,14 @@ section {
    CONTACT SECTION
 ============================== */
 .contact-section {
-  padding: 100px 0;
+  padding: 44px 0;
 }
 
 .contact-inner {
   background: var(--gradient-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
-  padding: 64px;
+  padding: 44px 32px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1127,7 +1127,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .contact-link {
@@ -1243,11 +1243,11 @@ section {
 }
 
 @media (max-width: 768px) {
-  section { padding: 72px 0; }
+  section { padding: 36px 0; }
   .container { padding: 0 20px; }
   .nav-links { display: none; }
-  .contact-inner { padding: 40px 24px; }
-  .hero-stats { gap: 24px; }
+  .contact-inner { padding: 32px 20px; }
+  .hero-stats { gap: 18px; }
 }
 
 @media (max-width: 480px) {

@@ -64,7 +64,7 @@ const skills = [
   },
 ];
 
-// Certificate entries — files in /public/cerificates/
+// Certificate entries
 const certificates = [
   {
     id: 1,
