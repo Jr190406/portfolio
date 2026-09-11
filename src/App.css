@@ -875,6 +875,20 @@ section {
   gap: 10px;
 }
 
+.project-links-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.project-links-row .project-link {
+  padding-top: 0;
+  border-top: none;
+}
+
 /* ==============================
    ACHIEVEMENTS SECTION
 ============================== */

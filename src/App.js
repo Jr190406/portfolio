@@ -6,58 +6,65 @@ import './App.css';
 ============================================= */
 const skills = [
   {
+    icon: '💻',
+    title: 'Languages',
+    tags: [
+      { label: 'Dart', color: 'emerald' },
+      { label: 'Python', color: 'emerald' },
+      { label: 'PHP', color: 'emerald' },
+      { label: 'JavaScript', color: 'emerald' },
+    ],
+  },
+  {
+    icon: '🎨',
+    title: 'Frontend',
+    tags: [
+      { label: 'HTML', color: 'cyan' },
+      { label: 'CSS', color: 'cyan' },
+      { label: 'React.js', color: 'cyan' },
+    ],
+  },
+  {
+    icon: '⚙️',
+    title: 'Backend',
+    tags: [
+      { label: 'Django', color: 'pink' },
+      { label: 'Node.js', color: 'pink' },
+      { label: 'CodeIgniter', color: 'pink' },
+    ],
+  },
+  {
     icon: '📱',
     title: 'Mobile Development',
     tags: [
-      { label: 'Mobile App Dev', color: '' },
       { label: 'Flutter', color: '' },
       { label: 'Dart', color: '' },
       { label: 'App Deployment', color: '' },
     ],
   },
   {
-    icon: '🌐',
-    title: 'Web Development',
+    icon: '🗄️',
+    title: 'Database / Services',
     tags: [
-      { label: 'HTML', color: 'cyan' },
-      { label: 'CSS', color: 'cyan' },
-      { label: 'JavaScript', color: 'cyan' },
       { label: 'MySQL', color: 'cyan' },
+      { label: 'Firebase', color: 'emerald' },
+      { label: 'Firestore', color: 'emerald' },
     ],
   },
   {
-    icon: '⚙️',
-    title: 'Programming Languages',
+    icon: '🚀',
+    title: 'Tools & Deployment',
     tags: [
-      { label: 'Python', color: 'emerald' },
-      { label: 'PHP', color: 'emerald' },
-      { label: 'JavaScript', color: 'emerald' },
-      { label: 'Dart', color: 'emerald' },
-    ],
-  },
-  {
-    icon: '🔧',
-    title: 'Frameworks & Tools',
-    tags: [
-      { label: 'React.js', color: 'pink' },
-      { label: 'Node.js', color: 'pink' },
-      { label: 'CodeIgniter', color: 'pink' },
-      { label: 'Django', color: 'pink' },
-      { label: 'Flutter', color: 'pink' },
+      { label: 'Git', color: 'pink' },
+      { label: 'GitHub', color: 'pink' },
+      { label: 'Vercel', color: 'pink' },
+      { label: 'Firebase Hosting', color: 'pink' },
+      { label: 'Hostinger VPS', color: 'pink' },
     ],
   },
 ];
 
-const achievements = [
-  { icon: '🏛️', title: 'Hack4Gov', org: 'Butuan City' },
-  { icon: '🎤', title: 'Pitching Competition', org: 'National Innovation Day' },
-  { icon: '🚀', title: 'Elev8PH 2025 Startup Challenge', org: 'Hack4Smarter Butuan' },
-  { icon: '🤖', title: 'The AI Advantage', org: 'AI & Organization Seminar' },
-  { icon: '📡', title: 'Omada Network Training', org: 'OCNA Wireless Certification' },
-];
-
-// Certificate entries — files go in /public/cerificates/
-// type: 'pdf' | 'image'
+// Certificate entries — files in /public/cerificates/
 const certificates = [
   {
     id: 1,
@@ -100,7 +107,7 @@ const certificates = [
    COMPONENTS
 ============================================= */
 
-// Navbar
+// Navbar (clean, no email or call buttons at top)
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -151,7 +158,7 @@ function Lightbox({ src, title, onClose }) {
 }
 
 /* =============================================
-   MAIN APP
+   MAIN APP (1 LAYER AT A TIME)
 ============================================= */
 function App() {
   const [lightbox, setLightbox] = useState(null);
@@ -171,7 +178,7 @@ function App() {
       <Navbar />
 
       {/* ============================
-          HERO
+          LAYER 1: HERO
       ============================ */}
       <section className="hero" id="hero">
         <div className="container">
@@ -185,12 +192,12 @@ function App() {
               <h1 className="hero-name" id="hero-name">
                 Armando V. <span className="gradient-text">Loro Jr.</span>
               </h1>
-              <p className="hero-role" id="hero-role">Full Stack Developer & Mobile App Specialist</p>
+              <p className="hero-role" id="hero-role">Junior Full Stack Developer</p>
 
               <div className="hero-contact" id="hero-contact">
                 <span className="contact-chip">
                   <span className="icon">📍</span>
-                  Sta. Josefa, Agusan del Sur, Philippines
+                  Davao City, Philippines
                 </span>
                 <span className="contact-chip">
                   <span className="icon">📧</span>
@@ -203,9 +210,11 @@ function App() {
               </div>
 
               <p className="hero-description" id="hero-description">
-                Enthusiastic Full Stack Developer with expertise in mobile app and web development.
-                Passionate about creating innovative solutions that enhance user experience through
-                clean code, modern frameworks, and creative problem-solving.
+                BSIT graduate with internship experience developing mobile and web applications
+                using Flutter, Dart, JavaScript, Python, PHP, and SQL. Experienced in working on
+                application features, database-driven systems, authentication, and deployment in a
+                two-person development team. Interested in building practical web and mobile
+                applications and growing as a full-stack developer.
               </p>
 
               <div className="hero-cta">
@@ -219,16 +228,16 @@ function App() {
 
               <div className="hero-stats" id="hero-stats">
                 <div className="stat-item">
-                  <div className="stat-number">5+</div>
-                  <div className="stat-label">Technologies</div>
+                  <div className="stat-number">6</div>
+                  <div className="stat-label">Tech Domains</div>
+                </div>
+                <div className="stat-item">
+                  <div className="stat-number">2</div>
+                  <div className="stat-label">Flagship Apps</div>
                 </div>
                 <div className="stat-item">
                   <div className="stat-number">5</div>
-                  <div className="stat-label">Achievements</div>
-                </div>
-                <div className="stat-item">
-                  <div className="stat-number">1</div>
-                  <div className="stat-label">Live Project</div>
+                  <div className="stat-label">Certificates</div>
                 </div>
               </div>
             </div>
@@ -241,7 +250,7 @@ function App() {
               <div className="hero-avatar">
                 <img
                   src="/2x2picture/armando.JPG"
-                  alt="Armando V. Loro Jr. — Full Stack Developer"
+                  alt="Armando V. Loro Jr. — Junior Full Stack Developer"
                   loading="eager"
                 />
               </div>
@@ -253,7 +262,7 @@ function App() {
       <div className="divider" />
 
       {/* ============================
-          ABOUT
+          LAYER 2: ABOUT / PROFILE SUMMARY
       ============================ */}
       <section className="about" id="about">
         <div className="container">
@@ -263,15 +272,14 @@ function App() {
           <div className="about-grid">
             <div className="about-text" id="about-text">
               <p>
-                I am an enthusiastic Mobile App and Web Development professional experienced in
-                driving effective project outcomes through innovative research and creative problem-solving.
-                I have developed solutions that enhanced user experience and contributed to project success
-                using skills in <strong>Python, PHP,</strong> and <strong>JavaScript</strong>.
+                I am a <strong>BSIT graduate</strong> with hands-on internship experience developing
+                mobile and web applications using <strong>Flutter, Dart, JavaScript, Python, PHP, and SQL</strong>.
+                Based in <strong>Davao City, Philippines</strong>, I bring focused problem-solving and full-cycle development capabilities.
               </p>
               <p>
-                Driven by a strong foundation in web development and programming languages, I demonstrate
-                strong research capabilities and teamwork. I am eager to apply my skills in mobile network
-                optimization and app deployment to enhance user experience and deliver impactful results.
+                Experienced in working on core application features, database-driven systems, authentication, and deployment
+                in a <strong>two-person development team</strong>. Dedicated to building practical, reliable web and mobile
+                applications and continuously advancing as a full-stack developer.
               </p>
             </div>
 
@@ -279,22 +287,22 @@ function App() {
               <div className="about-card">
                 <span className="card-icon">📱</span>
                 <h4>Mobile Development</h4>
-                <p>Building cross-platform mobile apps with Flutter & Dart</p>
+                <p>Cross-platform mobile apps with Flutter & Dart for passengers and drivers</p>
               </div>
               <div className="about-card">
                 <span className="card-icon">🌐</span>
                 <h4>Web Development</h4>
-                <p>Full-stack web solutions using modern frameworks</p>
+                <p>Interactive web dashboards and applications using React.js and modern CSS</p>
               </div>
               <div className="about-card">
-                <span className="card-icon">🔬</span>
-                <h4>Research</h4>
-                <p>Strong analytical and research capabilities</p>
+                <span className="card-icon">⚡</span>
+                <h4>Backend & APIs</h4>
+                <p>Application logic and services with Django, Node.js, and CodeIgniter</p>
               </div>
               <div className="about-card">
-                <span className="card-icon">🤝</span>
-                <h4>Teamwork</h4>
-                <p>Collaborative approach to complex problem-solving</p>
+                <span className="card-icon">👥</span>
+                <h4>Team Engineering</h4>
+                <p>Fast-paced 2-person development team handling auth, databases, and deployment</p>
               </div>
             </div>
           </div>
@@ -304,14 +312,14 @@ function App() {
       <div className="divider" />
 
       {/* ============================
-          SKILLS
+          LAYER 3: TECHNICAL SKILLS
       ============================ */}
       <section id="skills">
         <div className="container">
           <span className="section-label">What I Know</span>
           <h2 className="section-title">Technical Skills</h2>
           <p className="section-subtitle">
-            A versatile skill set spanning mobile, web, and backend development with modern frameworks and languages.
+            A versatile skill set spanning mobile, web, and backend development with modern frameworks, databases, and deployment tools.
           </p>
 
           <div className="skills-grid" id="skills-grid">
@@ -339,7 +347,7 @@ function App() {
       <div className="divider" />
 
       {/* ============================
-          EXPERIENCE
+          LAYER 4: EXPERIENCE
       ============================ */}
       <section className="experience" id="experience">
         <div className="container">
@@ -357,9 +365,9 @@ function App() {
                   🏛️ Agusan del Sur State University — Bunawan, Agusan del Sur
                 </p>
                 <p className="timeline-desc">
-                  Attended training sessions to enhance design knowledge and technical skills in mobile
-                  application development. Collaborated with the development team to contribute to live
-                  project initiatives and improve overall user experience.
+                  Collaborated in a two-person development team engineering mobile and web applications.
+                  Contributed to live project initiatives, database-driven workflows, Firebase authentication,
+                  and mobile application features to deliver enhanced user experiences.
                 </p>
               </div>
             </div>
@@ -370,7 +378,7 @@ function App() {
       <div className="divider" />
 
       {/* ============================
-          EDUCATION
+          LAYER 5: EDUCATION
       ============================ */}
       <section id="education">
         <div className="container">
@@ -379,7 +387,7 @@ function App() {
 
           <div className="education-grid" id="education-grid">
             <div className="education-card" id="edu-card-0">
-              <span className="education-year">2026 — Present</span>
+              <span className="education-year">BSIT Graduate</span>
               <span className="edu-icon">🎓</span>
               <h3>Bachelor of Science in Information Technology</h3>
               <p>Agusan del Sur State University — Bunawan, Agusan del Sur</p>
@@ -390,6 +398,11 @@ function App() {
               <span className="edu-icon">🏫</span>
               <h3>Senior High School</h3>
               <p>Sta. Josefa National High School</p>
+              <div style={{ marginTop: '10px' }}>
+                <span className="skill-tag cyan" style={{ fontSize: '0.75rem', padding: '4px 10px' }}>
+                  TVL Track • ICT Strand (Networking)
+                </span>
+              </div>
             </div>
 
             <div className="education-card" id="edu-card-2">
@@ -405,7 +418,7 @@ function App() {
       <div className="divider" />
 
       {/* ============================
-          PROJECTS
+          LAYER 6: FEATURED PROJECTS
       ============================ */}
       <section className="projects" id="projects">
         <div className="container">
@@ -416,19 +429,23 @@ function App() {
           </p>
 
           <div className="projects-grid" id="projects-grid">
-            {/* Scanalyzer */}
+            {/* Project 1: Scanalyzer */}
             <div className="project-card" id="project-card-0">
               <div className="project-icon-wrap">🔍</div>
-              <h3>Scanalyzer</h3>
+              <h3>Smart Document Analysis & Printing Cost Calculator</h3>
               <p>
-                Smart Document Analysis & Printing Cost Calculator. Automatically analyze your documents,
-                calculate precise printing costs, and optimize your printing budget with our intelligent
-                document analysis system.
+                Developed a web-based document analysis and printing cost calculator as a capstone project.
+                Implemented document processing and cost calculation features to estimate printing expenses.
+                Developed backend functionality using Python and Django for document analysis and application logic,
+                integrated with MySQL for persistent database management.
               </p>
               <div className="project-tech">
-                <span className="skill-tag">Web App</span>
-                <span className="skill-tag cyan">Document Analysis</span>
-                <span className="skill-tag emerald">Cost Calculator</span>
+                <span className="skill-tag emerald">Python</span>
+                <span className="skill-tag emerald">Django</span>
+                <span className="skill-tag cyan">MySQL</span>
+                <span className="skill-tag cyan">HTML</span>
+                <span className="skill-tag cyan">CSS</span>
+                <span className="skill-tag pink">JavaScript</span>
               </div>
               <a
                 href="https://www.scanalyzer.online"
@@ -441,7 +458,7 @@ function App() {
               </a>
             </div>
 
-            {/* SIKAD */}
+            {/* Project 2: SIKAD */}
             <div className="project-card" id="project-card-1">
               <div className="project-icon-wrap project-icon-img">
                 <img
@@ -450,27 +467,41 @@ function App() {
                   className="project-logo-circle"
                 />
               </div>
-              <h3>SIKAD</h3>
+              <h3>SIKAD - Ride/Transport Mobile Application</h3>
               <p>
-                Ride Smarter with SIKAD — the first shared ride booking app built for Filipino communities
-                using the RE (Rotary Engine), the iconic multi-passenger vehicle of the Philippines.
-                Book rides, track your driver in real time, and pay seamlessly — all in one app.
+                Developed a mobile ride-booking application for passengers and drivers using Flutter & Dart.
+                Implemented Firebase Authentication and Firestore for user accounts, roles, and application data.
+                Integrated Google Maps and location-based features for passenger pick up and destination selection.
+                Developed web-based dashboards using React.js for administrative and LGU-related functions.
               </p>
               <div className="project-tech">
-                <span className="skill-tag">Mobile App</span>
-                <span className="skill-tag cyan">Ride Booking</span>
-                <span className="skill-tag pink">Flutter</span>
-                <span className="skill-tag emerald">Real-Time Tracking</span>
+                <span className="skill-tag">Flutter</span>
+                <span className="skill-tag">Dart</span>
+                <span className="skill-tag emerald">Firebase</span>
+                <span className="skill-tag emerald">Firestore</span>
+                <span className="skill-tag cyan">React.js</span>
+                <span className="skill-tag pink">Google Maps</span>
               </div>
-              <a
-                href="https://sikad-landing-page.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-                id="project-link-sikad"
-              >
-                Visit Landing Page ↗
-              </a>
+              <div className="project-links-row">
+                <a
+                  href="https://sikad-landing-page.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                  id="project-link-sikad"
+                >
+                  Visit Landing Page ↗
+                </a>
+                <a
+                  href="https://armandovloro-portfolio.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                  id="project-link-portfolio"
+                >
+                  Interactive Portfolio ↗
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -479,34 +510,7 @@ function App() {
       <div className="divider" />
 
       {/* ============================
-          ACHIEVEMENTS
-      ============================ */}
-      <section id="achievements">
-        <div className="container">
-          <span className="section-label">Recognition</span>
-          <h2 className="section-title">Achievements & Participation</h2>
-          <p className="section-subtitle">
-            Events, competitions, and seminars that have shaped my growth as a developer.
-          </p>
-
-          <div className="achievements-grid" id="achievements-grid">
-            {achievements.map((item, i) => (
-              <div className="achievement-card" key={i} id={`achievement-${i}`}>
-                <div className="achievement-icon-wrap">{item.icon}</div>
-                <div>
-                  <h4>{item.title}</h4>
-                  <p>{item.org}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="divider" />
-
-      {/* ============================
-          CERTIFICATES
+          LAYER 7: CERTIFICATES
       ============================ */}
       <section className="certificates" id="certificates">
         <div className="container">
@@ -518,7 +522,6 @@ function App() {
 
           {certificates.length > 0 ? (
             <div className="certificates-grid" id="certificates-grid">
-              {/* Real certificates */}
               {certificates.map((cert) => {
                 const isPdf = cert.type === 'pdf';
                 const fileUrl = `/cerificates/${cert.file}`;
@@ -579,7 +582,7 @@ function App() {
           ) : (
             <div className="cert-empty-note">
               <span className="big-icon">🏅</span>
-              No certificates uploaded yet. Add files to /public/cerificates/
+              No certificates uploaded yet.
             </div>
           )}
         </div>
@@ -588,7 +591,7 @@ function App() {
       <div className="divider" />
 
       {/* ============================
-          CONTACT
+          LAYER 9: CONTACT
       ============================ */}
       <section className="contact-section" id="contact">
         <div className="container">
@@ -600,7 +603,7 @@ function App() {
               Get In Touch
             </h2>
             <p className="section-subtitle" style={{ margin: '0 auto', textAlign: 'center' }}>
-              Open to opportunities, collaborations, and freelance projects.
+              Open to junior full stack developer opportunities, mobile app engineering, and practical web solutions.
               Feel free to reach out — I'd love to connect!
             </p>
 
@@ -628,19 +631,28 @@ function App() {
               >
                 👤 Facebook Profile ↗
               </a>
+              <a
+                href="https://armandovloro-portfolio.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link"
+                id="contact-portfolio"
+              >
+                🌐 Interactive Portfolio ↗
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============================
-          FOOTER
+          LAYER 10: FOOTER
       ============================ */}
       <footer className="footer" id="footer">
         <div className="container">
           <p>
-            © {new Date().getFullYear()} <strong>Armando V. Loro Jr.</strong> — Full Stack Developer
-            &nbsp;·&nbsp; Sta. Josefa, Agusan del Sur, Philippines
+            © {new Date().getFullYear()} <strong>Armando V. Loro Jr.</strong> — Junior Full Stack Developer
+            &nbsp;·&nbsp; Davao City, Philippines
           </p>
         </div>
       </footer>
